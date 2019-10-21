@@ -1,0 +1,65 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+default_expiration: "15m"
+
+handlers:
+# index files
+- url: /(.*)/
+  static_files: _site/\1/index.html
+  upload: _site/(.*)/index.html
+  secure: always
+
+# site root
+- url: /
+  static_files: _site/index.html
+  upload: _site/index.html
+  secure: always
+  http_headers:
+    Link: '<https://shanee.io/bower_components/webcomponentsjs/webcomponents.min.js>; rel=preload; as=script, <https://shanee.io/styles/main.css>; rel=preload; as=style'
+
+- url: /robots.txt
+  static_files: _site/robots.txt
+  upload: _site/robots.txt
+
+- url: /archives
+  static_files: _site/archives/index.html
+  upload: _site/archives/index.html
+  secure: always
+
+- url: /about
+  static_files: _site/about/index.html
+  upload: _site/about/index.html
+  secure: always
+
+- url: /resume
+  static_files: _site/resume/index.html
+  upload: _site/resume/index.html
+  secure: always
+
+- url: /categories
+  static_files: _site/categories/index.html
+  upload: _site/categories/index.html
+  secure: always
+
+# categories have no '/', so can not cover by index files rule
+- url: /categories/(.*)
+  static_files: _site/categories/\1/index.html
+  upload: _site/categories/(.*)/index.html
+  secure: always
+
+- url: /\.well-known/acme-challenge/(.*)
+  static_files: _site/.well-known/acme-challenge/\1
+  upload: _site/\.well-known/acme-challenge/.*
+  mime_type: text/plain
+
+- url: /
+  static_dir: _site
+  secure: always
+
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$

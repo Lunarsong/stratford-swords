@@ -21,17 +21,18 @@
       <div data-border-width="1px" class="header-border">
       </div>
 
-
       <nav>
         <a class="button" href="/">Home</a>
-        <a class="button" href="/about/">About</a>
+        <!--a class="button" href="/about/">About</a-->
         <!--a class="button" href="/blog/">Blog</a-->
       </nav>
     </div>
   </div>
 
   <div class="topslider"></div>
-
+  <div class="centered">
+  <img src="/assets/images/logo_no_swords_300.png" alt="Stratford Swords Logo" style="position: absolute; display: block; margin-top:-150px;"/>
+  </div>
   <div class="blue-container">
       <div class="row" style="width: 75%;">
         <div style="flex-grow:3; flex-basis:0;">
@@ -54,6 +55,7 @@
     
     <div class="join-container" style="width:45%">
       <h1>Come Fence With Us</h1>
+      <h2>(We're currently on break but will be back soon! Stay tuned.)</h2>
       <div class="row">
         <div style="flex-grow:3; flex-basis:0;">
           <p><h2>When</h2></br>
@@ -110,46 +112,80 @@
 
   </div>
 
-  <div class="team-row">
-    <div class="column">
-      <div class="card">
-        <img src="/assets/images/shanee.jpg" alt="Shanee Nishry" class="team-image"/>
-        <div class="container">
-          <h2>Shanee Nishry</h2>
-          <p class="title">Founder</p>
-          <p>In search of people to train with, Shanee founded Stratford Swords to meet more people and share her love for swords.</p>
-          <p>She can usually be found talking about mechanics with a sword in her hand, or cuddling a cat.</p>
-          <!--p><button class="button">Contact</button></p-->
+  <div class="meet-the-team">
+    <h1>Meet The Team</h1>
+    <div class="team-row">
+      <div class="column">
+        <div class="card">
+          <img src="/assets/images/shanee.jpg" alt="Shanee Nishry" class="team-image"/>
+          <div class="container">
+            <h2>Shanee Nishry</h2>
+            <p class="title">Founder</p>
+            <p>In search of people to train with, Shanee founded Stratford Swords to meet more people and share her love for swords.</p>
+            <p>She can usually be found talking about mechanics with a sword in her hand, or cuddling a cat.</p>
+            <!--p><button class="button">Contact</button></p-->
+          </div>
         </div>
       </div>
-    </div>
-  
-    <div class="column">
-      <div class="card">
-        <img src="/assets/images/kate.jpg" alt="Kate Jeffreys" class="team-image"/>
-        <div class="container">
-          <h2>Kate Jeffreys</h2>
-          <p class="title">Senior Instructor</p>
-          <p>Passionate about anything swords, Kate often travels across the globe to train with the best swords instructors out there in a pursuit for mastery.</p>
-          <p>If you can't find her, she's hiding in her sword cave doing solo drills ⚔️</p>
-          <!--p><button class="button">Contact</button></p-->
+    
+      <div class="column">
+        <div class="card">
+          <img src="/assets/images/kate.jpg" alt="Kate Jeffreys" class="team-image"/>
+          <div class="container">
+            <h2>Kate Jeffreys</h2>
+            <p class="title">Senior Instructor</p>
+            <p>Passionate about anything swords, Kate often travels across the globe to train with the best swords instructors out there in a pursuit for mastery.</p>
+            <p>If you can't find her, she's hiding in her sword cave doing solo drills ⚔️</p>
+            <!--p><button class="button">Contact</button></p-->
+          </div>
         </div>
       </div>
-    </div>
-  
-    <div class="column">
-      <div class="card">
-        <img src="/assets/images/elizabeth.jpg" alt="Elizabeth Champion" class="team-image"/>
-        <div class="container">
-          <h2>Elizabeth Champion</h2>
-          <p class="title">Scholar of Arms & Armour</p>
-          <p>Elizabeth is a passionate scholar of Arms and Armour. If you can't find her swinging a sword she's probably researching mysterious myth and folklore.</p>
-          <p></br></br></p>
-          <!--p><button class="button">Contact</button></p-->
+    
+      <div class="column">
+        <div class="card">
+          <img src="/assets/images/elizabeth.jpg" alt="Elizabeth Champion" class="team-image"/>
+          <div class="container">
+            <h2>Elizabeth Champion</h2>
+            <p class="title">Scholar of Arms & Armour</p>
+            <p>Elizabeth is a passionate scholar of Arms and Armour. If you can't find her swinging a sword she's probably researching mysterious myth and folklore.</p>
+            <p></br></br></p>
+            <!--p><button class="button">Contact</button></p-->
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="connect">
+    <h1>Connect With Us</h1>
+    <div class="row">
+      <a href="https://www.facebook.com/StratfordSwords" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/StratfordSwords" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/stratfordswords/" class="fa fa-instagram"></a>
+    </div>
+
+    <div class="centered">
+      <div class="form-container">
+        <form action="javascript:;" onsubmit="sendMail(this);">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message.." style="height:200px"></textarea>
+          
+          <div class="centered">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+  function sendMail(theForm) {
+    window.location.href = 'mailto:admin@stratford-swords.co.uk?subject=' + theForm.subject.value + '&body=' + theForm.message.value + '%0D%0A%0D%0A~ ' + theForm.name.value;
+};
+  </script>
 
   <section>
     {{ content }}

@@ -1,4 +1,5 @@
 <!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <html lang="en">
 
 <head>
@@ -55,8 +56,8 @@
     
     <div class="join-container" style="width:45%">
       <h1>Come Fence With Us</h1>
-      <h2>(We're currently on break but will be back soon! Stay tuned.)</h2>
-      <div class="row">
+      <h2>(We're currently looking for a venue! Contact us or <a href="https://www.facebook.com/StratfordSwords">follow on Facebook</a> for updates.)</h2>
+      <div class="join-row">
         <div style="flex-grow:3; flex-basis:0;">
           <p><h2>When</h2></br>
           <b>Tuesdays:</b></br>
@@ -65,10 +66,8 @@
         <div style="flex-grow:0; flex-basis:0;"></div>
         <div style="flex-grow:3; flex-basis:0;">
           <p><h2>Where</h2></br>
-            King Edward VI School</br>
-            Chapel Ln</br>
+            Venue To Be Confirmed</br>
             Stratford-upon-Avon</br>
-            CV37 6BE</br>
             United Kingdom</p>
         </div>
       </div>
@@ -77,19 +76,17 @@
     <script>
       function initMap() {
         // The location of King Edward VI School.
-        var geo = {lat: 52.1898693, lng: -1.7077516};
+        var geo = {lat: 52.193803, lng: -1.7156402};
         // The map, centered at the school.
         var map = new google.maps.Map(
             document.getElementById('googleMap'), {zoom: 16, center: geo});
 
-          var contentString = '<div id="content">'+
-    '<h2>King Edward VI School</h2>'+
+        var contentString = '<div id="content">'+
+    '<h2>Venue To Be Confirmed</h2>'+
     '<div id="bodyContent">'+
-    '<p>Chapel Ln</br>\
-          Stratford-upon-Avon</br>\
-          CV37 6BE</br>\
+    '<p>Stratford-upon-Avon</br>\
           United Kingdom</p>'+
-    '<p><a href="https://maps.google.com/maps?ll=52.189869,-1.707752&z=16&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=17300360906259323881">View on Google Maps</a></p>'+
+    //'<p><a href="https://maps.google.com/maps?ll=52.189869,-1.707752&z=16&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=17300360906259323881">View on Google Maps</a></p>'+
     '</div>'+
     '</div>';
 
@@ -114,44 +111,47 @@
 
   <div class="meet-the-team">
     <h1>Meet The Team</h1>
-    <div class="team-row">
-      <div class="column">
-        <div class="card">
-          <img src="/assets/images/shanee.jpg" alt="Shanee Nishry" class="team-image"/>
-          <div class="container">
-            <h2>Shanee Nishry</h2>
-            <p class="title">Founder</p>
-            <p>In search of people to train with, Shanee founded Stratford Swords to meet more people and share her love for swords.</p>
-            <p>She can usually be found talking about mechanics with a sword in her hand, or cuddling a cat.</p>
-            <!--p><button class="button">Contact</button></p-->
+    <div class="team-container">
+      <div class="team-row">
+        <tr>
+          <div class="column">
+            <div class="card">
+              <img src="/assets/images/shanee.jpg" alt="Shanee Nishry" class="team-image"/>
+              <div class="container">
+                <h2>Shanee Nishry</h2>
+                <p class="title">Founder</p>
+                <p>In search of people to train with, Shanee founded Stratford Swords to meet more people and share her love for swords.</p>
+                <p>She can usually be found talking about mechanics with a sword in her hand, or cuddling a cat.</p>
+                <!--p><button class="button">Contact</button></p-->
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    
-      <div class="column">
-        <div class="card">
-          <img src="/assets/images/kate.jpg" alt="Kate Jeffreys" class="team-image"/>
-          <div class="container">
-            <h2>Kate Jeffreys</h2>
-            <p class="title">Senior Instructor</p>
-            <p>Passionate about anything swords, Kate often travels across the globe to train with the best swords instructors out there in a pursuit for mastery.</p>
-            <p>If you can't find her, she's hiding in her sword cave doing solo drills ⚔️</p>
-            <!--p><button class="button">Contact</button></p-->
+        
+          <div class="column">
+            <div class="card">
+              <img src="/assets/images/kate.jpg" alt="Kate Jeffreys" class="team-image"/>
+              <div class="container">
+                <h2>Kate Jeffreys</h2>
+                <p class="title">Senior Instructor</p>
+                <p>Passionate about anything swords, Kate often travels across the globe to train with the best swords instructors out there in a pursuit for mastery.</p>
+                <p>If you can't find her, she's hiding in her sword cave doing solo drills ⚔️</p>
+                <!--p><button class="button">Contact</button></p-->
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    
-      <div class="column">
-        <div class="card">
-          <img src="/assets/images/elizabeth.jpg" alt="Elizabeth Champion" class="team-image"/>
-          <div class="container">
-            <h2>Elizabeth Champion</h2>
-            <p class="title">Scholar of Arms & Armour</p>
-            <p>Elizabeth is a passionate scholar of Arms and Armour. If you can't find her swinging a sword she's probably researching mysterious myth and folklore.</p>
-            <p></br></br></p>
-            <!--p><button class="button">Contact</button></p-->
+        
+          <div class="column">
+            <div class="card">
+              <img src="/assets/images/elizabeth.jpg" alt="Elizabeth Champion" class="team-image"/>
+              <div class="container">
+                <h2>Elizabeth Champion</h2>
+                <p class="title">Scholar of Arms & Armour</p>
+                <p>Elizabeth is a passionate scholar of Arms and Armour. If you can't find her swinging a sword she's probably researching mysterious myth and folklore.</p>
+                <!--p><button class="button">Contact</button></p-->
+              </div>
+            </div>
           </div>
-        </div>
+        </tr>
       </div>
     </div>
   </div>

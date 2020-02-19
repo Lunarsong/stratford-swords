@@ -57,7 +57,7 @@ body {
 
 .header-container {
   width: 100%;
-  min-width: 980px;
+  /*min-width: 980px;*/
   display: block; 
   margin-block-start: 2em;
   margin-block-end: 1em;
@@ -79,6 +79,10 @@ body {
   margin: auto;
   padding-top: 120px;
   padding-bottom: 20px;
+
+  a {
+    color: white;
+  }
 }
 
 .about-container {
@@ -151,6 +155,13 @@ body {
   justify-content: center;
 }
 
+.join-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
 .centered {
   margin: auto;
   display: flex;
@@ -160,16 +171,31 @@ body {
 }
 
 .team-image {
-  width:100%;
+  width: 100%;
   height: 333px;
   object-fit: cover;
 }
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-container {
+  margin: auto;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Three columns side by side */
 .column {
-  float: left;
-  width: 25.0%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 33%;
+  display: table-cell;
   margin-bottom: 16px;
-  padding: 0 8px;
 
   .title {
     color: grey;
@@ -195,16 +221,32 @@ body {
 }
 
 /* Display the columns below each other instead of side by side on small screens */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1024px) {
   .column {
-    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     display: block;
+    width: 100%;
+  }
+  
+  .team-container {
+    margin: auto;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .join-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 /* Add some shadows to create a card effect */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
   h2 {
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
@@ -255,13 +297,10 @@ body {
 .team-row {
   content: "";
   clear: both;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.row {
-  display: flex;
+  display: table;
+  table-layout:fixed;
+  border-collapse: separate;
+  border-spacing: 15px;
   align-items: center;
   justify-content: center;
 }

@@ -242,6 +242,15 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  .topslider {
+    height: 300px;
+    width: 100%;
+    background-image: url("/assets/images/fightcamp.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 }
 
 /* Add some shadows to create a card effect */

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="/assets/css/post.css">
+  <title>{{ page.title }}</title>
+</head>
+
+<body>
+
+  <div class="header-container">
+    <div class="header-text-container">
+      <!--div class="logo-container">
+        
+      </div>
+
+      <div data-border-width="1px" class="border">
+      </div-->
+
+      <nav>
+        <a class="main" href="/"><img src="/assets/images/logo_100.png" alt="Stratford Swords Logo"/> Stratford Swords</a>
+        <a class="button" href="/blog/">Blog</a>
+        <!--a class="button" href="/about/">About</a-->
+        <!--a class="button" href="/blog/">Blog</a-->
+      </nav>
+    </div>
+  </div>
+
+  <div class="header">
+    <div class="content">
+      <div class="title">
+        <h1>{{ page.title }}</h1>
+        <div class="post-info-container">
+          <img src="{{ page.avatar }}" class="avatar">
+          <div class="text-content">
+            <span class="author">{{ page.author }}</span>
+            <span class="date">{{ page.date | date_to_long_string }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="articles-container">
+    <div class="article">
+        <div class="card">
+            {{ content }}
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+    
+  
+</body>
+</html>

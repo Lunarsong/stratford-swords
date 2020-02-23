@@ -10,22 +10,13 @@
 <body>
 
   <div class="articles-container">
-        <div class="article">
-          <a href="/blog/" class="article-link-container">
-          <div class="card">
-            <img src="/assets/images/shanee.jpg" alt="Shanee Nishry" class="article-image"/>
-            <div class="article-content">
-              <p>
-                <span>Category</span>
-                How To Point A Sword At The Camera</p>
-            </div>
-          </div>
-          </a>
 
-      </div>
+    {% for post in site.posts %}
+      {% include article_card.html link=post.url image=post.image image-alt=post.image-alt category=post.category title=post.title %}
+    {% endfor %}
       
       
-        <div class="article">
+        <!--div class="article">
           <div class="card">
             <img src="/assets/images/kate.jpg" alt="Kate Jeffreys" class="article-image"/>
             <div class="article-content">
@@ -81,9 +72,7 @@
             <p><span>Category</span>
               How To Find Amazing Photo Backgrounds</p>
           </div>
-        </div>
-  </div>
-    
+        </div-->
   </div>
   
 </body>

@@ -24,7 +24,7 @@ github_username:  Lunarsong
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: stratford-swords
 plugins:
   - jekyll-feed
 

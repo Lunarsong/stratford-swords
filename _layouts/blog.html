@@ -9,70 +9,25 @@
 
 <body>
 
-  <div class="articles-container">
+  <div class="featured-article-container">
+    <a href="/"><img class="logo" src="/assets/images/logo_200.png" alt="Stratford Swords Logo"/></a>
+    <div class="content">
+      <div class="title">
+        <span>Latest Article</span>
+        <h1>Newest Article</h1>
+      </div>
+    </div>
 
+    <nav>
+      <a class="nav-item" href="/">Home</a>
+      <a class="nav-item" href="/blog/">Blog</a>
+    </nav>
+  </div>
+
+  <div class="articles-container">
     {% for post in site.posts %}
       {% include article_card.html link=post.url image=post.image image-alt=post.image-alt category=post.category title=post.title %}
     {% endfor %}
-      
-      
-        <!--div class="article">
-          <div class="card">
-            <img src="/assets/images/kate.jpg" alt="Kate Jeffreys" class="article-image"/>
-            <div class="article-content">
-              <p>
-                <span>Category</span>
-                How To Wear A Fencing Mask</p>
-            </div>
-          </div>
-        </div>
-      
-      
-        <div class="article">
-          <div class="card">
-            <img src="/assets/images/elizabeth.jpg" alt="Elizabeth Champion" class="article-image"/>
-            <div class="article-content">
-              <p><span>Category</span>
-                How To Find Amazing Photo Backgrounds</p>
-            </div>
-          </div>
-        </div>
-
-      
-      <div class="article">
-        <a href="/blog/" class="article-link-container">
-        <div class="card">
-          <img src="/assets/images/shanee.jpg" alt="Shanee Nishry" class="article-image"/>
-          <div class="article-content">
-            <p>
-              <span>Category</span>
-              How To Point A Sword At The Camera</p>
-          </div>
-        </div>
-        </a>
-      </div>
-    
-      
-      <div class="article">
-        <div class="card">
-          <img src="/assets/images/kate.jpg" alt="Kate Jeffreys" class="article-image"/>
-          <div class="article-content">
-            <p>
-              <span>Category</span>
-              How To Wear A Fencing Mask</p>
-          </div>
-        </div>
-      </div>
-    
-      
-      <div class="article">
-        <div class="card">
-          <img src="/assets/images/elizabeth.jpg" alt="Elizabeth Champion" class="article-image"/>
-          <div class="article-content">
-            <p><span>Category</span>
-              How To Find Amazing Photo Backgrounds</p>
-          </div>
-        </div-->
   </div>
   
 </body>

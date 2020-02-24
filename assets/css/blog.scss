@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "nav-bar";
+
 @-ms-viewport{
     width: device-width;
     height: device-height;
@@ -42,7 +44,6 @@ body {
   
       .title {
         max-width: 53%;
-        margin-top: 100px;
   
         h1 {
           font-family: 'Oswald', sans-serif;
@@ -121,21 +122,6 @@ body {
         min-height: 50px;
     }
 }
-
-nav {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.nav-item {
-    padding: 0 10px;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: white;
-    text-decoration: none;
-  }
 
 .article-content {
     text-align: center;

@@ -1,4 +1,21 @@
 // Social Media Buttons
+.ma {
+  padding: 20px;
+  font-size: 30px !important;
+  width: 30px !important;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  background-color: slategrey;
+  color: white;
+}
+
+.ma:hover {
+  opacity: 0.7;
+}
+
 .fa {
   padding: 20px;
   font-size: 30px !important;

@@ -56,7 +56,6 @@
     
     <div class="join-container" style="width:45%">
       <h1>Come Fence With Us</h1>
-      <h2>(We're currently looking for a venue! Contact us or <a href="https://www.facebook.com/StratfordSwords">follow on Facebook</a> for updates.)</h2>
       <div class="join-row">
         <div style="flex-grow:3; flex-basis:0;">
           <p><h2>When</h2></br>
@@ -66,8 +65,11 @@
         <div style="flex-grow:0; flex-basis:0;"></div>
         <div style="flex-grow:3; flex-basis:0;">
           <p><h2>Where</h2></br>
-            Venue To Be Confirmed</br>
+            Stratford-upon-Avon School</br>
+            Alcester Road</br>
             Stratford-upon-Avon</br>
+            Warwickshire</br>
+            CV37 9DH</br>
             United Kingdom</p>
         </div>
       </div>
@@ -75,18 +77,20 @@
 
     <script>
       function initMap() {
-        // The location of King Edward VI School.
         var geo = {lat: 52.193803, lng: -1.7156402};
         // The map, centered at the school.
         var map = new google.maps.Map(
-            document.getElementById('googleMap'), {zoom: 16, center: geo});
+            document.getElementById('googleMap'), {zoom: 15, center: geo});
 
         var contentString = '<div id="content">'+
-    '<h2>Venue To Be Confirmed</h2>'+
+    '<h2>Stratford-upon-Avon School</h2>'+
     '<div id="bodyContent">'+
-    '<p>Stratford-upon-Avon</br>\
-          United Kingdom</p>'+
-    //'<p><a href="https://maps.google.com/maps?ll=52.189869,-1.707752&z=16&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=17300360906259323881">View on Google Maps</a></p>'+
+    '<p>Alcester Road</br>\
+      Stratford-upon-Avon</br>\
+      Warwickshire</br>\
+      CV37 9DH</br>\
+      United Kingdom</p>'+
+    '<p><a href="https://www.google.com/maps/place/Stratford+upon+Avon+School/@52.1937021,-1.724482,16.25z/data=!4m5!3m4!1s0x4870ce37177de19f:0x10da7d3c099677ef!8m2!3d52.193728!4d-1.720814">View on Google Maps</a></p>'+
     '</div>'+
     '</div>';
 

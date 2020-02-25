@@ -106,10 +106,10 @@ body {
 }
 
 .header {
-  margin-bottom: 20px!important;
   background-color: rgb(52, 63, 125);
   width: 100%;
-  height: 450px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 
   .content {
     box-sizing: border-box;
@@ -148,6 +148,8 @@ body {
   height: 250px;
   object-fit: contain;
   margin-right: 50px;
+  margin-bottom: 20px;
+  max-width: 70%;
   /*object-fit: cover;*/
 }
 
@@ -208,9 +210,7 @@ body {
     background-color: white;
     width: 100%;
     border-radius: 4px 4px 4px 4px;
-    margin: 15px 15px 15px 15px;
     display: flex;
-    max-width: 95%;
 
     .title {
         color: grey;
@@ -276,7 +276,12 @@ body {
       flex-direction: row;
     }
     .article {
-        max-width: 95%;
+      margin: 15px 15px 15px 15px;
+      max-width: 95%;
+    }
+
+    .header {
+      margin-bottom: 20px!important;
     }
 
     .header .content {
@@ -294,10 +299,16 @@ body {
 
     .article {
         max-width: 1280px;
+        margin: 15px 15px 15px 15px;
     }
 
     .social-buttons {
       flex-direction: column;
+    }
+
+    .header {  
+      height: 450px;
+      margin-bottom: 20px!important;
     }
 
     .header .content {

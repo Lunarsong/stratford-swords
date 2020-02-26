@@ -49,11 +49,11 @@ I'll write a number of drills you can do and get back to the concepts at the end
 
 ## Working the Meyer Square
 
-For clarity, I've made this color coded diagram which divides the original diagram into clear squares. The diagram was inspired by one Keith Farrell had all I did was to add color coding to help distinguishing the sequences during workout.
+For clarity, I've made this color coded diagram which divides the original diagram into clear squares. The diagram was inspired by one [Keith Farrell](http://www.encasedinsteel.co.uk/author/KeithFarrell/) had all I did was to add color coding to help distinguishing the sequences during workout.
 
 ![Coloured Meyer Square Diagram](/assets/blog/meyer-square/meyer_square_colored.png "Coloured Meyer Square Diagram")
 
-If you like, print the file and use it in your training.
+If you like, print [the file](https://docs.google.com/drawings/d/1GgtB-nQ4_lGKKuiHQgdTc6adanuPYKXuN35534G7Q9s/edit?usp=sharing) and use it in your training.
 
 ## Single Sequence
 
@@ -90,21 +90,18 @@ Cut to the same opening twice before moving to the next one. This will teach you
 
 
 Example:
-
 - Strike at 1.
 - Strike at 2.
 - Strike at 2 again.
 
 
 Example with pulling:
-
 - Strike at 1.
 - Attack at 2 and pull the attack.
 - Strike back at 1.
 
 
 It is also useful to do the entire square attacking each opening twice as it will teach you many movements.
-
 - Strike at 1.
 - Strike at 1 again.
 - Strike at 2.

@@ -1,0 +1,122 @@
+.header {
+    background-color: rgb(52, 63, 125);
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  
+    .content {
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1280px;
+      padding-left: 4%;
+      transition: padding .2s;
+      transition-property: padding;
+      transition-duration: 0.4s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+      display: flex;
+      align-items: center;
+      height: 424px;
+      justify-content: space-between;
+      flex-direction: column;
+  
+      .title {
+        margin: 8px 8px 8px 8px;
+        max-width: 100%;
+  
+        h1 {
+          font-family: 'Oswald', sans-serif;
+          font-size: 44px;
+          margin: 0 0 24px;
+          font-weight: 500;
+          line-height: 1.2em;
+          color: #fff;
+        }
+
+        .featured-text {
+          font-family: 'Oswald', sans-serif;
+          font-weight: 500;
+          font-size: 13.0px;
+          color: white;
+          letter-spacing: 1.0px;
+          line-height: 1.6em;
+          opacity: 0.75;
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+  
+  .article-header-image {
+    height: 250px;
+    object-fit: contain;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    max-width: 70%;
+    /*object-fit: cover;*/
+  }
+  
+  .post-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+    }
+  }
+  
+  .author {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 16.0px;
+    color: white;
+    display: block;
+    letter-spacing: 1.0px;
+    margin-bottom: 4px;
+  }
+  
+  .date {
+    font-size: 13.0px;
+    color: white;
+    margin-bottom: 2px;
+    font-style: italic;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  @media all and (min-width: 50em) {
+    .header {
+      margin-bottom: 20px!important;
+    }
+
+    .header .content {
+      flex-direction: row;
+    }
+
+    .header .content .title {
+      max-width: 43%;
+    }
+  }
+  @media all and (min-width: 1600px) {
+    .header {  
+      height: 450px;
+      margin-bottom: 20px!important;
+    }
+
+    .header .content {
+      flex-direction: row;
+    }
+
+    .header .content .title {
+      max-width: 43%;
+    }
+  }

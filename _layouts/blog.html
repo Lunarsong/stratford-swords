@@ -9,20 +9,31 @@
 
 <body>
 
-  <div class="featured-article-container">
-    <!--a href="/"><img class="logo" src="/assets/images/logo_200.png" alt="Stratford Swords Logo"/></a-->
-    <div class="content">
-      <div class="title">
-        <span>Latest Article</span>
-        <h1>Newest Article</h1>
+  <div class="header">
+    {% for post in site.posts limit:1 %}
+    <a href="{{ post.url }}" class="article-link-container">
+      <div class="content">
+        <div class="title">
+          <span class="featured-text">Latest Article</span class="featured-text">
+          <h1>{{ post.title }}</h1>
+          <div class="post-info-container">
+            <img src="{{ post.avatar }}" class="avatar">
+            <div class="text-content">
+              <span class="author">{{ post.author }}</span>
+              <span class="date">{{ post.date | date_to_long_string }}</span>
+            </div>
+          </div>
+        </div>
+        <img src="{{ post.image }}" class="article-header-image">
       </div>
-    </div>
+    </a>
+    {% endfor %}
 
     {% include nav-bar.html %}
   </div>
 
   <div class="articles-container">
-    {% for post in site.posts %}
+    {% for post in site.posts offset:1 %}
       {% include article_card.html link=post.url image=post.image image-alt=post.image-alt category=post.category title=post.title %}
     {% endfor %}
   </div>

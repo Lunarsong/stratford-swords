@@ -37,6 +37,9 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 15px;
 }
 
 .article {
@@ -126,5 +129,11 @@ body {
 
     .social-buttons {
       flex-direction: column;
+      justify-content: unset;
+    }
+
+    .card {
+      max-width: 800px;
+      margin: auto;
     }
   }

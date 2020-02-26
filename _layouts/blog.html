@@ -34,7 +34,7 @@
   </div>
 
   <div class="articles-container">
-    {% for post in site.posts offset:1 %}
+    {% for post in site.posts %}
       {% include article_card.html link=post.url image=post.image image-alt=post.image-alt category=post.category title=post.title %}
     {% endfor %}
   </div>

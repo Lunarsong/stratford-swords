@@ -1,0 +1,76 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Build & Deploy Jekyll (Release)
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the staging branch
+on:
+  push:
+    branches: release
+  pull_request:
+    branches: release
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build_and_deploy"
+  build_and_deploy:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: GitHub Checkout
+        uses: actions/checkout@v2
+
+      - name: Bundler Cache
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Set up Ruby
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
+      # change this to (see https://github.com/ruby/setup-ruby#versioning):
+      # uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
+        with:
+          ruby-version: 2.6
+      - name: Install dependencies
+        run: bundle install
+      #- name: Run tests
+        #run: bundle exec rake
+        
+      - name: Install gems
+        run: | 
+          echo "Installing gems..."
+          bundle config path vendor/bundle
+          bundle install
+
+      - name: Build
+        run: | 
+          echo "Building Jekyll site..."
+          JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: Publish
+        env:
+          ACTOR: ${{ secrets.ACTOR }}
+          REPO: ${{ secrets.REPO }}
+          TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          FOLDER="${JEKYLL_DESTINATION:-_site}"
+          DEST="https://x-access-token:${TOKEN}@github.com/${REPO}.git"
+          BRANCH="gcloud-release"
+          
+          echo "Publishing..."
+          cd ${FOLDER}
+          git init
+          git config user.name "${ACTOR}"
+          git config user.email "shanee@shanee.io"
+          git add .
+          git commit -m "Published by GitHub Actions"
+          git push --force ${DEST} master:${BRANCH}

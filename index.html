@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400|Nunito+Sans:200,400|Oswald:500|Roboto&display=swap"
+  rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <title>Stratford-upon-Avon Swords</title>
+</head>
+
+<body>
+
+  <div class="header-container">
+    <div class="header-text-container">
+      <div style="min-height: 54px;">
+        <h1 class="header">Stratford-upon-Avon Swords</h1>
+      </div>
+
+      <div style="min-height: 28px;">
+        <h2 class="header">Historical Fencing Club</h2>
+      </div>
+
+      <div data-border-width="1px" class="header-border">
+      </div>
+
+      <nav>
+        <a class="button" href="/">Home</a>
+        <!--a class="button" href="/about/">About</a-->
+        <!--a class="button" href="/blog/">Blog</a-->
+      </nav>
+    </div>
+  </div>
+
+  <div class="topslider"></div>
+  <div class="centered">
+  <img src="/assets/images/logo_no_swords_300.png" alt="Stratford Swords Logo" style="position: absolute; display: block; margin-top:-150px;"/>
+  </div>
+  <div class="blue-container">
+      <div class="row" style="width: 75%;">
+        <div style="flex-grow:3; flex-basis:0;">
+          <div class="about-container">
+            <h1>About Us</h1>
+            <p>Stratford Swords is a friendly and inclusive group based in the lovely Shakespearean town of Stratford-upon-Avon and focused on the study of Historical Fencing.</p>
+            <p>We study manuscripts written by Medieval and Renaissance fencing masters, such as Johannes Liechtenauer, Fiore dei Liberi, and Salvator Fabris, who wrote their instructions for fighting with the different weapons of the day.</p>
+            <p>Our school aims to create a welcoming and collaborative space. We examine a variety of weapons and masters from history, supporting both scholars and enthusiasts to advance their learning, enhance their lives, and make friends in the process.</p>
+          </div>
+        </div>
+
+        
+      <!--div style="flex-grow:1; flex-basis:0;"></div>
+
+      <div style="flex-grow:3; flex-basis:0;"></div-->
+    </div>
+
+
+    <div id="googleMap" style="margin:auto; width:100%; height:400px;"></div>
+    
+    <div class="join-container" style="width:45%">
+      <h1>Come Fence With Us</h1>
+      <div class="join-row">
+        <div style="flex-grow:3; flex-basis:0;">
+          <p><h2>When</h2></br>
+          <b>Thursdays:</b></br>
+          6pm-8pm</br></p>
+        </div>
+        <div style="flex-grow:0; flex-basis:0;"></div>
+        <div style="flex-grow:3; flex-basis:0;">
+          <p><h2>Where</h2></br>
+            Stratford-upon-Avon School</br>
+            Alcester Road</br>
+            Stratford-upon-Avon</br>
+            Warwickshire</br>
+            CV37 9DH</br>
+            United Kingdom</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function initMap() {
+        var geo = {lat: 52.193803, lng: -1.7156402};
+        // The map, centered at the school.
+        var map = new google.maps.Map(
+            document.getElementById('googleMap'), {zoom: 15, center: geo});
+
+        var contentString = '<div id="content">'+
+    '<h2>Stratford-upon-Avon School</h2>'+
+    '<div id="bodyContent">'+
+    '<p>Alcester Road</br>\
+      Stratford-upon-Avon</br>\
+      Warwickshire</br>\
+      CV37 9DH</br>\
+      United Kingdom</p>'+
+    '<p><a href="https://www.google.com/maps/place/Stratford+upon+Avon+School/@52.1937021,-1.724482,16.25z/data=!4m5!3m4!1s0x4870ce37177de19f:0x10da7d3c099677ef!8m2!3d52.193728!4d-1.720814">View on Google Maps</a></p>'+
+    '</div>'+
+    '</div>';
+
+        // The marker, positioned at the school.
+        var marker = new google.maps.Marker({
+          position: geo,
+          map: map,
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+        infowindow.open(map, marker);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu9gP9Q2iIp4Jx1MiNETnNkK_X6lnIdC4&callback=initMap"></script>
+
+  </div>
+
+  <div class="meet-the-team">
+    <h1>Meet The Team</h1>
+    <div class="team-container">
+      <div class="team-row">
+        <tr>
+          <div class="column">
+            <div class="card">
+              <img src="/assets/images/shanee.jpg" alt="Shanee Nishry" class="team-image"/>
+              <div class="container">
+                <h2>Shanee Nishry</h2>
+                <p class="title">Founder</p>
+                <p>In search of people to train with, Shanee founded Stratford Swords to meet more people and share her love for swords.</p>
+                <p>She can usually be found talking about mechanics with a sword in her hand, or cuddling a cat.</p>
+                <!--p><button class="button">Contact</button></p-->
+              </div>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <img src="/assets/images/kate.jpg" alt="Kate Jeffreys" class="team-image"/>
+              <div class="container">
+                <h2>Kate Jeffreys</h2>
+                <p class="title">Senior Instructor</p>
+                <p>Passionate about anything swords, Kate often travels across the globe to train with the best swords instructors out there in a pursuit for mastery.</p>
+                <p>If you can't find her, she's hiding in her sword cave doing solo drills ⚔️</p>
+                <!--p><button class="button">Contact</button></p-->
+              </div>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <img src="/assets/images/elizabeth.jpg" alt="Elizabeth Champion" class="team-image"/>
+              <div class="container">
+                <h2>Elizabeth Champion</h2>
+                <p class="title">Junior Instructor</p>
+                <p>Elizabeth is a passionate scholar of Arms and Armour, and is particularly interested in the fight treatises that we look at in our HEMA studies.</p>
+                <p>If she’s not got her nose in a manuscript, she’s probably researching mysterious myth and folklore.</p>
+              </div>
+            </div>
+          </div>
+        </tr>
+      </div>
+    </div>
+  </div>
+
+  <div class="connect">
+    <h1>Connect With Us</h1>
+    <div class="row">
+      <a href="https://www.facebook.com/StratfordSwords" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/StratfordSwords" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/stratfordswords/" class="fa fa-instagram"></a>
+    </div>
+
+    <div class="centered">
+      <div class="form-container">
+        <form action="javascript:;" onsubmit="sendMail(this);">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message.." style="height:200px"></textarea>
+          
+          <div class="centered">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+  function sendMail(theForm) {
+    window.location.href = 'mailto:admin@stratford-swords.co.uk?subject=' + theForm.subject.value + '&body=' + theForm.message.value + '%0D%0A%0D%0A~ ' + theForm.name.value;
+};
+  </script>
+
+  <section>
+    
+
+  </section>
+  <footer>
+  </footer>
+</body>
+
+</html>
